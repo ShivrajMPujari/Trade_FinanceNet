@@ -103,7 +103,7 @@ instantiateChaincode 0 2
 
 # # Query chaincode on peer0.org1
 echo "Querying chaincode on peer0.org1..."
-chaincodeQuery 0 1 100
+chaincodeQuery 0 2 100
 
 # Invoke chaincode on peer0.org1 and peer0.org2
 echo "Sending invoke transaction on peer0.org1 peer0.org2..."
