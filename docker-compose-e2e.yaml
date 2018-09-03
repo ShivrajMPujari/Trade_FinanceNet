@@ -23,10 +23,10 @@ services:
       - FABRIC_CA_SERVER_CA_NAME=ca-importer
       - FABRIC_CA_SERVER_TLS_ENABLED=false
       - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.importer.bridgeIt.com-cert.pem
-      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/CA1_PRIVATE_KEY
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/79bfcb469a8f3112870bc34c1130fd08252ddf0047acdd788683c6e8b8bfe65f_sk
     ports:
       - "7054:7054"
-    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.importer.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/CA1_PRIVATE_KEY -b admin:adminpw -d'
+    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.importer.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/79bfcb469a8f3112870bc34c1130fd08252ddf0047acdd788683c6e8b8bfe65f_sk -b admin:adminpw -d'
     volumes:
       - ./crypto-config/peerOrganizations/importer.bridgeIt.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca
@@ -40,10 +40,10 @@ services:
       - FABRIC_CA_SERVER_CA_NAME=ca-exporter
       - FABRIC_CA_SERVER_TLS_ENABLED=false
       - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.exporter.bridgeIt.com-cert.pem
-      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/CA2_PRIVATE_KEY
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/0c3494c7b90a11829a9af75d0b09901a0802929b66d1a9d4020255fa4e64464e_sk
     ports:
       - "8054:7054"
-    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.exporter.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/CA2_PRIVATE_KEY -b admin:adminpw -d'
+    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.exporter.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/0c3494c7b90a11829a9af75d0b09901a0802929b66d1a9d4020255fa4e64464e_sk -b admin:adminpw -d'
     volumes:
       - ./crypto-config/peerOrganizations/exporter.bridgeIt.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca_peerExporter
@@ -57,10 +57,10 @@ services:
       - FABRIC_CA_SERVER_CA_NAME=ca-custom
       - FABRIC_CA_SERVER_TLS_ENABLED=false
       - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.custom.bridgeIt.com-cert.pem
-      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/CA3_PRIVATE_KEY
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/c9bd95e0fef2b960cc3c12a5c6cc724d5b870f2b6c7671633b66e7715d0571c0_sk
     ports:
       - "9054:7054"
-    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.custom.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/CA3_PRIVATE_KEY -b admin:adminpw -d'
+    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.custom.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/c9bd95e0fef2b960cc3c12a5c6cc724d5b870f2b6c7671633b66e7715d0571c0_sk -b admin:adminpw -d'
     volumes:
       - ./crypto-config/peerOrganizations/custom.bridgeIt.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca_peerCustom
@@ -81,10 +81,10 @@ services:
       - FABRIC_CA_SERVER_CA_NAME=ca-importerBank
       - FABRIC_CA_SERVER_TLS_ENABLED=false
       - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.importerBank.bridgeIt.com-cert.pem
-      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/CA4_PRIVATE_KEY
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/9bf19aedcf6c766206fecb3dc3ee5c3a9533640410c6458028837a790fccb8b2_sk
     ports:
       - "10054:7054"
-    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.importerBank.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/CA4_PRIVATE_KEY -b admin:adminpw -d'
+    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.importerBank.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/9bf19aedcf6c766206fecb3dc3ee5c3a9533640410c6458028837a790fccb8b2_sk -b admin:adminpw -d'
     volumes:
       - ./crypto-config/peerOrganizations/importerBank.bridgeIt.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca_peerImporterBank
@@ -105,10 +105,10 @@ services:
       - FABRIC_CA_SERVER_CA_NAME=ca-insurance
       - FABRIC_CA_SERVER_TLS_ENABLED=false
       - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.insurance.bridgeIt.com-cert.pem
-      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/CA5_PRIVATE_KEY
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/3068b4f7994868db7d2f724399430130a29cd0a06050c53155e95d9cf500c63e_sk
     ports:
       - "11054:7054"
-    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.insurance.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/CA5_PRIVATE_KEY -b admin:adminpw -d'
+    command: sh -c 'fabric-ca-server start --ca.certfile /etc/hyperledger/fabric-ca-server-config/ca.insurance.bridgeIt.com-cert.pem --ca.keyfile /etc/hyperledger/fabric-ca-server-config/3068b4f7994868db7d2f724399430130a29cd0a06050c53155e95d9cf500c63e_sk -b admin:adminpw -d'
     volumes:
       - ./crypto-config/peerOrganizations/insurance.bridgeIt.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca_peerInsurance
